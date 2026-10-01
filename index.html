@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rodolfo Jr. G. Gersalia | Mechanical Engineer</title>
+<meta name="description" content="Portfolio of Rodolfo Jr. G. Gersalia, Mechanical Engineer: MEPF design, 2D/3D CAD, water treatment, refrigeration and technical sales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--side:#f1f3f9;--bg:#fff;--ink:#111;--muted:#5d6472;--blue:#4a8bd8;--blue-d:#2f6fbd;--line:#dfe3ee;--serif:'Playfair Display',Georgia,serif;--sans:'Quicksand',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px}
+a{color:var(--blue-d)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+aside{position:fixed;inset:0 auto 0 0;width:260px;background:var(--side);padding:34px 20px;text-align:center;overflow-y:auto;z-index:20}
+aside img{width:128px;height:128px;border-radius:50%;object-fit:cover;object-position:top;border:4px solid #fff}
+aside h1{font:700 21px var(--serif);margin-top:16px;line-height:1.25}
+aside p{font-size:13px;color:var(--muted)}
+nav{margin-top:26px;display:flex;flex-direction:column;gap:2px}
+nav a{text-decoration:none;color:var(--ink);font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:7px 0;border-bottom:2px solid transparent;align-self:center}
+nav a:hover,nav a.on{color:var(--blue-d);border-color:var(--blue)}
+.toggle{display:none}
+main{margin-left:260px}
+section{padding:90px 7vw;min-height:60vh;border-bottom:1px solid var(--line)}
+h2{font:700 clamp(28px,4vw,40px) var(--serif);margin-bottom:8px}
+.lead{color:var(--muted);margin-bottom:30px;max-width:60ch}
+.btn{display:inline-block;border:1px solid var(--ink);padding:10px 22px;font:600 13px var(--sans);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink);background:none;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.fill{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.fill:hover{background:var(--blue-d)}
+/* hero */
+#home{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;min-height:100vh;padding-top:40px}
+#home h2{font-size:clamp(40px,6vw,68px);line-height:1.1;margin-bottom:18px}
+#home p{color:var(--muted);max-width:44ch;margin-bottom:26px}
+.slider{position:relative;background:var(--side);aspect-ratio:4/3;overflow:hidden}
+.slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s}
+.slider img.on{opacity:1}
+.dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:8px}
+.dots button{width:12px;height:12px;border-radius:50%;border:2px solid var(--blue);background:#fff;cursor:pointer}
+.dots button.on{background:var(--blue)}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.chip{border:1px solid var(--line);background:var(--side);padding:9px 16px;border-radius:30px;font:600 14px var(--sans);cursor:pointer;color:var(--ink);transition:.2s}
+.chip:hover{border-color:var(--blue)}
+.chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.panel{background:var(--side);border-left:4px solid var(--blue);padding:22px 26px;max-width:720px;min-height:90px}
+.panel h3{font:700 20px var(--serif);margin-bottom:6px}
+.panel ul{margin:10px 0 0 18px}
+/* accordion */
+.acc{max-width:760px;display:flex;flex-direction:column;gap:10px}
+.acc-item{border:1px solid var(--line)}
+.acc-item>button{width:100%;display:flex;justify-content:space-between;gap:14px;align-items:center;text-align:left;background:#fff;border:0;padding:16px 20px;cursor:pointer;font:inherit}
+.acc-item>button:hover{background:var(--side)}
+.acc-item b{font-size:17px}
+.acc-item small{display:block;color:var(--muted);font-size:14px}
+.acc-item .when{color:var(--muted);font-size:14px;white-space:nowrap}
+.acc-item .more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
+.acc-item.open .more{grid-template-rows:1fr}
+.more>div{overflow:hidden}
+.more p{padding:4px 20px 18px;color:var(--muted)}
+.acc-item.open>button{background:var(--side)}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;max-width:980px}
+.card{background:var(--side);border:1px solid transparent;padding:22px;text-align:left;cursor:pointer;font:inherit;color:inherit;transition:.2s;min-height:150px}
+.card:hover,.card.on{border-color:var(--blue);background:#fff;box-shadow:0 6px 18px rgba(74,139,216,.18)}
+.card h3{font:700 19px var(--serif);margin-bottom:6px}
+.card p{font-size:14px;color:var(--muted)}
+.card .hide{display:none;margin-top:8px}
+.card.on .hide{display:block}
+.projects{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.projects .card{padding:0;min-height:0}
+.projects img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.projects .card div{padding:16px 20px}
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(17,20,30,.78);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}
+.modal.show{display:flex}
+.modal-box{background:#fff;max-width:900px;max-height:92vh;overflow:auto;position:relative}
+.modal-box img{width:100%;display:block;max-height:60vh;object-fit:contain;background:var(--side)}
+.modal-box div{padding:20px 26px 26px}
+.modal-box h3{font:700 24px var(--serif)}
+.modal-box button{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;border:0;background:#fff;font-size:20px;cursor:pointer}
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;max-width:900px}
+.contact a,.contact button{display:block;background:var(--side);padding:20px;text-decoration:none;color:var(--ink);border:1px solid transparent;font:inherit;text-align:left;cursor:pointer}
+.contact a:hover,.contact button:hover{border-color:var(--blue)}
+.contact b{display:block;font:700 17px var(--serif)}
+.contact span{color:var(--muted);font-size:14px;word-break:break-word}
+footer{padding:30px 7vw;color:var(--muted);font-size:14px}
+@media(max-width:900px){
+ aside{transform:translateX(-100%);transition:.3s}
+ aside.open{transform:none}
+ main{margin-left:0}
+ .toggle{display:block;position:fixed;top:12px;left:12px;z-index:30;background:var(--blue);color:#fff;border:0;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer}
+ #home{grid-template-columns:1fr;padding-top:80px}
+ section{padding:70px 6vw}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<button class="toggle" id="toggle" aria-label="Open menu">&#9776;</button>
+<aside id="side">
+  <img src="images/profile.jpg" alt="Portrait of Rodolfo Jr. Gersalia">
+  <h1>Rodolfo Jr. G. Gersalia</h1>
+  <p>Mechanical Engineer in the Philippines</p>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#personality">Personality</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#seminars">Seminars</a><a href="#contact">Contact</a>
+  </nav>
+</aside>
+
+<main>
+<section id="home">
+  <div>
+    <h2>I am a Mechanical Engineer</h2>
+    <p>I design and supervise MEPF, water, refrigeration and electrical systems, and I turn them into clear 2D/3D drawings and accurate quotations.</p>
+    <a class="btn fill" href="#projects">View projects</a> <a class="btn" href="#contact">Contact me</a>
+    <div class="facts">
+      <button class="chip" data-goto="#skills">SolidWorks</button>
+      <button class="chip" data-goto="#skills">AutoCAD</button>
+      <button class="chip" data-goto="#skills">Archicad</button>
+      <button class="chip" data-goto="#skills">Excel automation</button>
+    </div>
+  </div>
+  <div class="slider" id="slider" aria-label="Project renders">
+    <img class="on" src="images/testing-facility.jpg" alt="3D render of a water and ice testing facility">
+    <img src="images/nail-cutter.jpg" alt="3D render of a nail cutter">
+    <img src="images/clutch.jpg" alt="Sectioned 3D model of a clutch assembly">
+    <div class="dots"></div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About me</h2>
+  <p class="lead">A Mechanical Engineering graduate from the Technological University of the Philippines with experience in MEPF system design, project engineering and technical sales consultation.</p>
+  <div class="grid">
+    <button class="card" data-more><h3>Hands-on</h3><p>Site supervision and field operations.</p><p class="hide">I manage progress on site, handle people and activities, and prepare the papers a project needs to be formal and complete.</p></button>
+    <button class="card" data-more><h3>Technical computing</h3><p>Custom Excel automation.</p><p class="hide">I build automatic computation sheets for water, electrical and thermal systems, plus advanced Word and PowerPoint editing.</p></button>
+    <button class="card" data-more><h3>Problem solving</h3><p>Accurate, efficient solutions.</p><p class="hide">I apply analytical thinking to both design work and field operations so the solution works on paper and on site.</p></button>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <p class="lead">Select a skill to see what I can do with it.</p>
+  <div class="chips" id="skillChips"></div>
+  <div class="panel" id="skillPanel" aria-live="polite"></div>
+</section>
+
+<section id="personality">
+  <h2>Personality</h2>
+  <p class="lead">Select a trait to see how it shows up in my work.</p>
+  <div class="grid" id="traits"></div>
+</section>
+
+<section id="experience">
+  <h2>Work experience</h2>
+  <p class="lead">Select a role to open the details.</p>
+  <div class="acc" id="jobs"></div>
+</section>
+
+<section id="education">
+  <h2>Education and languages</h2>
+  <div class="acc" id="edu"></div>
+  <div class="chips" style="margin-top:22px" id="langs"></div>
+  <div class="panel" id="langPanel">Select a language to see how I use it.</div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="lead">Select a project to view it larger.</p>
+  <div class="grid projects" id="projGrid"></div>
+  <p style="margin-top:24px"><a class="btn" href="https://drive.google.com/drive/folders/1PhNBiFAjHFO92394_6aAve8In0411hu1" target="_blank" rel="noopener">Open all projects on Google Drive</a></p>
+</section>
+
+<section id="seminars">
+  <h2>Seminars attended</h2>
+  <div class="grid" id="sem"></div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="lead">Select any card to reach me.</p>
+  <div class="contact">
+    <a href="mailto:rodolfgers@gmail.com"><b>Email</b><span>rodolfgers@gmail.com</span></a>
+    <a href="tel:+639476108497"><b>Call or text</b><span>0947 610 8497</span></a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Sabalo+St+Barangay+12+Caloocan+City" target="_blank" rel="noopener"><b>Location</b><span>Blk 38 B Lot 16 Brgy 12, Sabalo St., Caloocan City</span></a>
+    <button data-ref><b>Khaye De Castro</b><span>Shanghai Oriental HR. Select to show number.</span></button>
+    <button data-ref><b>Gina Ascano Panganiban</b><span>Shanghai Oriental Sales Supervisor. Select to show number.</span></button>
+  </div>
+</section>
+<footer>&copy; <span id="yr"></span> Rodolfo Jr. G. Gersalia</footer>
+</main>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="modal-box"><button id="close" aria-label="Close">&times;</button><img id="mImg" alt=""><div><h3 id="mT"></h3><p id="mP"></p></div></div></div>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const skills=[
+["Project engineering & MEPF","Plan reading, design and coordination of mechanical, electrical, plumbing and fire protection systems.",["Plan reading and designing","Construction progress management","Preparing required project paperwork"]],
+["CAD & simulation","Detailed 2D and 3D designs and simulation.",["SolidWorks","AutoCAD","Archicad"]],
+["Water treatment & RO","Reverse osmosis systems and water quality work.",["RO systems","Filtration and clarification","Membrane care","Water quality testing and monitoring"]],
+["Pumps & fluid handling","Moving and controlling water in a system.",["Centrifugal and positive displacement pumps","Flow rate regulation","Hydraulic piping layouts","Pressure vessel inspection"]],
+["Media & chemical pre-filtration","Keeping the front end of a treatment line healthy.",["Multimedia, GAC, AFM, DMI and softener resins","Backwash control","Chlorine and ozone dosing systems"]],
+["Refrigeration & thermal","Commercial refrigeration servicing.",["Refrigeration loop servicing","Compressor and evaporator"]],
+["Electrical & power","Wiring and distribution for equipment.",["System electrical wiring and distribution","Single and three-phase power circuits","Instrument calibration (pressure gauge)"]],
+["Technical sales","Turning client needs into a system design and a quotation.",["Water, solar, vending, laundry and ice equipment","Custom system designs","Technical quotations"]],
+["Excel, Word & PowerPoint","Office tools used as engineering tools.",["Automatic computation systems in Excel","Advanced Word and PowerPoint editing"]]];
+const traits=[
+["Fast learner","I pick up new equipment, software and systems quickly, from LG laundry units to solar inverters."],
+["Optimistic","I stay upbeat when a job gets difficult and keep the team moving toward a solution."],
+["Explorer","I look for how things work and try new tools, methods and fields of engineering."],
+["Good listener","I listen to clients and teammates first, so the design answers the real requirement."],
+["Good at instruction","I can explain a process step by step so other people can follow and repeat it."],
+["Good communication","I translate technical details into plain language for clients, crews and managers."]];
+const jobs=[
+["Service and sales engineer","Shanghai Oriental Import and Export","March 2026 - October 2026","Consulted clients on inquiries and requirements across water, solar, vending, laundry and ice equipment, and delivered custom system designs and technical quotations."],
+["Project engineer / CAD operator","Systech Industry Corporation","2024 - 2026","Produced 2D and 3D designs and simulations, and handled project engineering tasks for water, thermal and electrical systems."],
+["Junior utility engineer (intern)","D.M. Wenceslao and Associates Incorporated","2023","Internship in utility engineering, working on MEPF plans and learning site operations."],
+["Merchandiser","Landmark Department Store","2020","Customer-facing retail work that built communication and teamwork skills."],
+["Service crew","McDonald's","2019","First job, working in a fast-paced team with a focus on service."]];
+const edu=[
+["Bachelor of Science in Mechanical Engineering","Technological University of the Philippines","2019 - 2024","Core mechanical engineering training that leads into my MEPF, CAD and thermal-fluid work."],
+["Science, Technology, Engineering, and Mathematics (STEM)","Mystical Rose School of Caloocan Inc.","2017 - 2019","Senior high school STEM strand, the base for my engineering studies."]];
+const langs=[["Filipino","My first language, used for site crews and everyday work."],["English","Used for technical documents, quotations and client communication."]];
+const projs=[
+["7th floor testing facility","images/testing-facility.jpg","A 3D layout of a testing room with ice machines, a cooling tower, filtration tanks, an RO skid, pumps and electrical panels, built in SolidWorks."],
+["Nail cutter","images/nail-cutter.jpg","A 3D model and render of a nail cutter, showing the lever, pin and steel body as separate parts."],
+["Clutch assembly","images/clutch.jpg","A sectioned 3D model of a clutch with the friction disc, pressure plate and splined hub visible, submitted as Group 6 work."]];
+const sem=[
+["LG Commercial Washer and Dryer Technical Training","April 15, 2026","LG Electronics Philippines, 15th and 16th floor, One Paseo Building, Pasig City."],
+["Growatt and Sungrid Energy Corp. Training/Seminar","July 28, 2026","Solaire Resort, Quezon City."]];
+const refs=["0919 069 4513","0919 069 4507"];
+
+// skills
+const chips=$('#skillChips'),panel=$('#skillPanel');
+skills.forEach((s,i)=>{const b=document.createElement('button');b.className='chip';b.textContent=s[0];b.onclick=()=>show(i);chips.append(b)});
+function show(i){$$('.chip',chips).forEach((c,j)=>c.classList.toggle('on',i===j));const s=skills[i];panel.innerHTML=`<h3>${s[0]}</h3><p>${s[1]}</p><ul>${s[2].map(x=>`<li>${x}</li>`).join('')}</ul>`}
+show(0);
+// traits
+$('#traits').innerHTML=traits.map(t=>`<button class="card" data-more><h3>${t[0]}</h3><p>Select to read more.</p><p class="hide">${t[1]}</p></button>`).join('');
+// accordions
+function acc(el,data){el.innerHTML=data.map(d=>`<div class="acc-item"><button aria-expanded="false"><span><b>${d[0]}</b><small>${d[1]}</small></span><span class="when">${d[2]}</span></button><div class="more"><div><p>${d[3]}</p></div></div></div>`).join('');
+ $$('.acc-item>button',el).forEach(b=>b.onclick=()=>{const it=b.parentElement,o=it.classList.toggle('open');b.setAttribute('aria-expanded',o)})}
+acc($('#jobs'),jobs);acc($('#edu'),edu);
+// languages
+$('#langs').innerHTML=langs.map(l=>`<button class="chip">${l[0]}</button>`).join('');
+$$('#langs .chip').forEach((c,i)=>c.onclick=()=>{$$('#langs .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');$('#langPanel').textContent=langs[i][1]});
+// seminars
+$('#sem').innerHTML=sem.map(s=>`<button class="card" data-more><h3>${s[0]}</h3><p>${s[1]}</p><p class="hide">${s[2]}</p></button>`).join('');
+// projects + modal
+$('#projGrid').innerHTML=projs.map((p,i)=>`<button class="card" data-p="${i}"><img src="${p[1]}" alt="${p[0]}" loading="lazy"><div><h3>${p[0]}</h3><p>Select to enlarge</p></div></button>`).join('');
+const modal=$('#modal');
+function openP(i){const p=projs[i];$('#mImg').src=p[1];$('#mImg').alt=p[0];$('#mT').textContent=p[0];$('#mP').textContent=p[2];modal.classList.add('show');$('#close').focus()}
+$$('[data-p]').forEach(c=>c.onclick=()=>openP(+c.dataset.p));
+$('#close').onclick=()=>modal.classList.remove('show');
+modal.onclick=e=>{if(e.target===modal)modal.classList.remove('show')};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('show')});
+// generic expand cards
+$$('[data-more]').forEach(c=>c.onclick=()=>c.classList.toggle('on'));
+// references
+$$('[data-ref]').forEach((b,i)=>b.onclick=()=>{const l=document.createElement('a');l.href='tel:+63'+refs[i].replace(/\D/g,'').slice(1);l.innerHTML=b.innerHTML.replace(/<span>.*<\/span>/,`<span>${refs[i]}</span>`);l.style.cssText='';b.replaceWith(l)});
+// hero shortcuts
+$$('[data-goto]').forEach(b=>b.onclick=()=>$(b.dataset.goto).scrollIntoView({behavior:'smooth'}));
+// slider
+const imgs=$$('#slider img'),dots=$('.dots');let cur=0,timer;
+imgs.forEach((_,i)=>{const d=document.createElement('button');d.setAttribute('aria-label','Show project '+(i+1));d.onclick=()=>{go(i);reset()};dots.append(d)});
+function go(i){cur=i;imgs.forEach((m,j)=>m.classList.toggle('on',j===i));$$('button',dots).forEach((d,j)=>d.classList.toggle('on',j===i))}
+function reset(){clearInterval(timer);timer=setInterval(()=>go((cur+1)%imgs.length),4500)}
+go(0);reset();
+// menu
+const side=$('#side');$('#toggle').onclick=()=>side.classList.toggle('open');
+$$('#nav a').forEach(a=>a.onclick=()=>side.classList.remove('open'));
+const links=$$('#nav a');
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'}).observe&&$$('section').forEach(s=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+s.id))}),{rootMargin:'-40% 0px -55% 0px'}).observe(s));
+$('#yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
